@@ -15,8 +15,8 @@ namespace CodeTestTallyIT.Controllers
 		public const float nightRate = 6.5f;
 		public const float weekendRate = 10;
 
-		[HttpGet]
-		public ActionResult<CarparkRate> Get([FromBody]CarparkDuriation duriation)
+		[HttpPost]
+		public ActionResult<CarparkRate> PostRate([FromBody]CarparkDuriation duriation)
 		{
 			return GetRate(duriation);
 		}

@@ -1,0 +1,28 @@
+@import '../../styles/config.scss';
+
+.rate-modal-container {
+	background-color: $lightGray2;
+	display: flex;
+	width: 100%;
+	padding: 2rem;
+	border-radius: 2rem;
+	flex-direction: column;
+	margin-top: 1rem;
+	
+	h1 {
+		font-size: 2rem;
+		font-weight: 900;
+		margin-bottom: 1rem;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+		font-weight: 900;
+		margin: 1rem 0;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+		font-weight: 300;
+	}
+}

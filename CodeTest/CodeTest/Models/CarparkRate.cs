@@ -10,13 +10,13 @@ namespace CodeTestTallyIT.Models
 		}
 
 		public string Name { get; }
-		public RateType Type { get; set; }
+		public string Type { get; set; }
 		public float Rate { get; set; }
 
 		public CarparkRate (string name, float rate, RateType type)
 		{
 			this.Name = name;
-			this.Type = type;
+			this.Type = type.ToString();
 			this.Rate = rate;
 		}
 	}

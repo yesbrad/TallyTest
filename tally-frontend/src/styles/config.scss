@@ -1,0 +1,75 @@
+
+// VARIABLES
+
+$primaryColor : #e21111;
+$secondaryColor : #FF0057;
+$primaryGradient: linear-gradient(to Left,$primaryColor, $secondaryColor);
+$primaryGradientUp: linear-gradient($primaryColor, $secondaryColor);
+
+$white: white;
+$black: rgb(29, 29, 29);
+$lightGray2: #F6F6F6;
+$lightGray: rgb(199, 199, 199);
+$darkGray: rgb(88, 88, 88);
+
+$mobileSize : 500px;
+$tabletSize : 1000px;
+$smallSize : 1400px;
+
+$sidePadding: 2rem;
+$spacing1: 1rem;
+$spacing2: 2rem;
+$borderRadius1: 2rem;
+
+$h1Size: 3.5rem;
+
+// PRESETS
+
+@mixin FlexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin DBorder {
+	border: 1px solid red;
+}
+
+@mixin DBorderB {
+	border: 2px solid blue;
+}
+
+@mixin Fill {
+	width: 100%;
+	height: 100%;
+}
+
+@mixin BackgroundImageCovered ($url) {
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+@mixin ScrollBar($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+	// For Google Chrome
+	&::-webkit-scrollbar {
+	  width:  $size;
+	  height: $size;
+	}
+  
+	&::-webkit-scrollbar-thumb {
+	  background: $foreground-color;
+	  border-radius: 10px;
+	}
+	
+	&::-webkit-scrollbar-track {
+	  background: $background-color;
+	}
+  
+	// For Internet Explorer
+	& {
+	  scrollbar-face-color: $foreground-color;
+	  scrollbar-track-color: $background-color;
+	}
+  }
